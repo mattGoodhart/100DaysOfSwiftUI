@@ -105,7 +105,6 @@ struct ContentView: View {
     }
         
     func flagTapped(_ number: Int) {
-      
         if number == correctAnswer {
             
             scoreTitle = "Correct"
@@ -114,12 +113,10 @@ struct ContentView: View {
             scoreTitle = "Wrong, that was the flag of " + countries[number] + " you clown"
             score -= 1
         }
-    
         showingScore = true
-        }
+    }
     
     func askQuestion() {
-        
         guard gameCount != 8 else {
             isGameOver = true
             return
